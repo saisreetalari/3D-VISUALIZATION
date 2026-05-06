@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AR Edu Learning</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script type="module"
+src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<style>
+/* ---------------------------- BACKGROUND ---------------------------- */
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:'Poppins',sans-serif;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    flex-direction:column;
+
+    /* Dark / attractive background */
+    background: linear-gradient(135deg, #0d0d0d, #111111);
+    color:white;
+    overflow-y: auto; /* <- scroll enable cheyali */
+}
+
+/* ---------------- STARS BACKGROUND ---------------- */
+#stars{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1; /* behind all content */
+  overflow:hidden;
+}
+
+.star{
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:white;
+  border-radius:50%;
+  opacity:0.8;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity:0.2; transform: translateY(0px); }
+  to { opacity:1; transform: translateY(50px); }
+}
+
+<model-viewer id="viewer"
+      src="models/penguin.glb"
+      camera-controls
+      auto-rotate
+      ar
+      shadow-intensity="60">
+  </model-viewer>/* Card styling (input / buttons) */
+.card{
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+    color:white;
+    box-shadow:0 0 30px cyan;
+}
+
+/* Info text */
+#info{
+    margin-top:10px;
+    font-size:18px;
+    text-align:center;
+}
+
+/* Learn section */
+#learn{
+    margin-top:15px;
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* Fullscreen / Share buttons container */
+.viewerBar{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:10px;
+}
+
+/* Chat button */
+.chatBtn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    padding:15px;
+    font-size:24px;
+    border:none;
+    border-radius:50%;
+    background:cyan;
+    color:#111;
+    box-shadow:0 0 20px black;
+    cursor:pointer;
+    z-index:999;
+}
+
+/* Chat box */
+.chatBox{
+    position:fixed;
+    bottom:80px;
+    right:20px;
+    width:300px;
+    max-height:400px;
+    background: rgba(0,0,0,0.8);
+    border-radius:10px;
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
+    box-shadow:0 0 30px cyan;
+    z-index:999;
+}
+
+.chatHeader{
+    background: cyan;
+    color:#111;
+    padding:10px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.chatMessages{
+    flex:1;
+    padding:10px;
+    overflow-y:auto;
+    color:white;
+    font-size:14px;
+}
+
+.chatInputArea{
+    display:flex;
+    gap:5px;
+    padding:10px;
+    background:#111;
+}
+
+.chatInputArea input{
+    flex:1;
+    padding:8px;
+    border-radius:5px;
+    border:none;
+}
+
+.chatInputArea button{
+    padding:8px 12px;
+    border:none;
+    border-radius:5px;
+    background:cyan;
+    color:#111;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ---------------- STARS ---------------- -->
+<div id="stars"></div>
+
+<section class="main-container">
+
+  <!-- BACK BUTTON -->
+  <a href="index.html" style="align-self:flex-start;margin-bottom:15px">
+    <button>← Back</button>
+  </a><br>
+
+  <!-- INPUT CARD -->
+  <div class="card">
+    <textarea id="prompt" placeholder="Type here..."></textarea>
+    <div class="buttons">
+      <button onclick="startListening()">🎙️ Voice</button>
+      <button onclick="generate()">Generate</button>
+     
+            <button onclick="quiz()">Quiz</button>
+<!-- ✅ IMPORT BUTTON -->
+  <button onclick="document.getElementById('imageInput').click()">🖼 Import</button>
+  
+  <!-- Hidden File Input -->
+  <input type="file"
+         id="imageInput"
+         accept="imageInput"
+         style="display:none"
+         onchange="handleFile(event)">    </div>
+    <div id="info">3D Generator</div>
+  </div>
+
+  <div id="learn"></div>
+
+  <!-- 3D MODEL -->
+  <model-viewer id="viewer"
+      src="models/penguin.glb"
+      camera-controls
+      auto-rotate
+      ar
+      shadow-intensity="60">
+  </model-viewer>
+
+  <div class="viewerBar">
+      <button onclick="toggleFullscreen()">⛶ Full Screen</button>
+      <button onclick="shareModel()">🔗 Share</button>
+  </div>
+
+</section>
+
+
+<!-- FLOAT BUTTON -->
+<button onclick="toggleChat()" class="chatBtn">🤖</button>
+
+<!-- CHAT BOX -->
+<div id="chatContainer" class="chatBox">
+
+<div class="chatHeader">
+AR Edu Assistant
+</div>
+
+<div id="chatMessages" class="chatMessages"></div>
+
+<div class="chatInputArea">
+<input type="text" id="chatInput" placeholder="Ask anything about 3D models...">
+<button onclick="sendMessage()">➤</button>
+</div>
+
+</div>
+
+<script>
+/* ---------------- GENERATE STARS ---------------- */
+const starsContainer = document.getElementById("stars");
+const starCount = 150; // number of stars
+
+for(let i=0;i<starCount;i++){
+    let star = document.createElement("div");
+    star.className = "star";
+    star.style.top = Math.random()*100 + "%";
+    star.style.left = Math.random()*100 + "%";
+    let size = Math.random()*2 + 1;
+    star.style.width = size + "px";
+    star.style.height = size + "px";
+    star.style.animationDuration = (Math.random()*3 + 1) + "s";
+    starsContainer.appendChild(star);
+}
+</script>
+<script src="app.js"></script>
+
+</body>
+</html>

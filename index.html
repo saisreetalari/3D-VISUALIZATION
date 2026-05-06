@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AR Edu Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* BODY + BACKGROUND */
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    color:white;
+    min-height:100vh;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background: linear-gradient(135deg, #0d0d0d, #111111);
+}
+
+/* STARS BACKGROUND */
+#stars{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  overflow:hidden;
+}
+
+.star{
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:white;
+  border-radius:50%;
+  opacity:0.8;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity:0.2; transform: translateY(0px); }
+  50% { opacity:1; transform: translateY(50px); }
+}
+
+/* HERO TITLE */
+h1{
+    text-align:center;
+    color:white;
+    margin-top:40px;
+}
+
+/* ROTATING PHOTOS CAROUSEL */
+.container{
+    position:relative;
+    width:600px;
+    height:600px;
+    perspective:1500px;
+    transform-style:preserve-3d;
+    animation: rotatePhotos 20s linear infinite;
+    margin-bottom:20px;
+}
+
+.card{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:220px;
+    height:220px;
+    margin:-110px 0 0 -110px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 0 30px cyan;
+}
+
+.card:nth-child(1){ transform: rotateY(0deg) translateZ(300px); }
+.card:nth-child(2){ transform: rotateY(72deg) translateZ(300px); }
+.card:nth-child(3){ transform: rotateY(144deg) translateZ(300px); }
+.card:nth-child(4){ transform: rotateY(216deg) translateZ(300px); }
+.card:nth-child(5){ transform: rotateY(288deg) translateZ(300px); }
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.card .text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    text-shadow:0 0 15px black;
+    text-align:center;
+}
+
+@keyframes rotatePhotos{
+    from{ transform: rotateY(0deg); }
+    to{ transform: rotateY(360deg); }
+}
+
+/* START VISUALIZATION BUTTON BELOW CAROUSEL */
+.round-btn{
+    padding:20px 40px;
+    font-size:18px;
+    border-radius:50px;
+    background: cyan;
+    color: #111;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+    box-shadow:0 0 20px cyan;
+    transition:0.3s;
+}
+.round-btn:hover{
+    transform: scale(1.05);
+    box-shadow:0 0 40px cyan;
+}
+</style>
+</head>
+<body>
+
+<!-- STARS -->
+<div id="stars"></div>
+
+<h1 style="text-align:center; color:skyblue; font-size:50px; font-weight:700; margin-top:40px;">
+    Augmented Reality Education
+</h1>
+<!-- ROTATING PHOTOS CAROUSEL -->
+<div class="container" style="margin-top:-40px;">
+    <div class="card"><img src="https://picsum.photos/400?1"><div class="text">AI Learning</div></div>
+    <div class="card"><img src="https://picsum.photos/400?2"><div class="text">AR Education</div></div>
+    <div class="card"><img src="https://picsum.photos/400?3"><div class="text">Future Tech</div></div>
+    <div class="card"><img src="https://picsum.photos/400?4"><div class="text">Innovation</div></div>
+    <div class="card"><img src="https://picsum.photos/400?5"><div class="text">Science</div></div>
+</div>
+<!- START VISUALIZATION BUTTON BELOW CAROUSEL ->
+<div style="text-align:center; margin-top:-30px;">
+    <button class="round-btn" onclick="location.href='learn.html'">Start Visualization</button>
+</div>
+
+<!-- STARS JS -->
+<script>
+const starsContainer = document.getElementById("stars");
+const starCount = 150;
+for(let i=0;i<starCount;i++){
+    let star = document.createElement("div");
+    star.className="star";
+    star.style.top = Math.random()*100 + "%";
+    star.style.left = Math.random()*100 + "%";
+    let size = Math.random()*2 + 1;
+    star.style.width = size + "px";
+    star.style.height = size + "px";
+    star.style.animationDuration = (Math.random()*3 + 1) + "s";
+    starsContainer.appendChild(star);
+}
+</script>
+
+</body>
+</html>
