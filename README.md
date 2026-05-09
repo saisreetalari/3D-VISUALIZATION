@@ -7,16 +7,15 @@ The platform allows users to explore educational concepts through interactive 3D
 
 Features
 
-• Interactive 3D educational visualization
-• AI chatbot assistant
-• Voice recognition support
-• Text-to-speech explanations
-• Topic-based 3D model generation
-• Educational summaries
-• Interactive quizzes
-• Fullscreen 3D model viewing
-• Responsive modern UI
-• Animated star background effects
+* Interactive 3D educational visualization
+* AI chatbot assistant
+* Voice recognition support
+* Text-to-speech explanations
+* Topic-based 3D model generation
+* Educational summaries
+* Interactive quizzes
+* Fullscreen 3D model viewing
+* Animated star background effects
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
