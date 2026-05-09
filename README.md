@@ -1,4 +1,4 @@
-# 3D-VISUALIZATION
+# 3D-Visualization
 An interactive educational platform that uses 3D visualization to convert user input into visual models, making complex concepts easier to understand. Includes quizzes and summaries to enhance engagement and improve learning outcomes.
 
 The platform allows users to explore educational concepts through interactive 3D models, AI-powered explanations, voice commands, and educational quizzes inside a futuristic interface.
