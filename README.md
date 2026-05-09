@@ -69,11 +69,11 @@ Screenshots
 
 Home Page
 
-![Home Page](images/home.png)
+![Home Page](https://github.com/saisreetalari/3D-VISUALIZATION/blob/main/home-page.png)
 
-3D Visualization
+Main Page
 
-![3D Visualization](images/visualization.png)
+![Main Page](images/visualization.png)
 
 AI Chatbot
 
