@@ -85,8 +85,15 @@ Model Generation
 
 Quiz Attempt
 
-![Quiz Attempt]()
+![Quiz Attempt](https://github.com/saisreetalari/3D-VISUALIZATION/blob/main/quiz-attempt.png)
 
+Quiz Completed
+
+![Quiz Completed]()
+
+Model Import
+
+![Model Import]()
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
