@@ -140,38 +140,36 @@ The project includes an AI chatbot integrated using OpenRouter API.
 
 The chatbot helps users by:
 
-• Explaining educational concepts
-• Answering learning-related questions
-• Providing quick assistance during exploration
+* Explaining educational concepts
+* Answering learning-related questions
+* Providing quick assistance during exploration
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Voice Features
 
-• Speech Recognition for voice input
-• Speech Synthesis for audio explanations
-• Hands-free learning interaction
+* Speech Recognition for voice input
+* Speech Synthesis for audio explanations
+* Hands-free learning interaction
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Future Improvements
 
-• Real AR integration
-• Advanced AI tutoring
-• More 3D educational models
-• Cloud database integration
-• User login system
-• Better chatbot accuracy
-• Multiplayer collaborative learning
+* Real AR integration
+* Advanced AI tutoring
+* More 3D educational models
+* User login system
+* Better chatbot accuracy
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Challenges Faced
 
-• Managing large 3D model files
-• AI API integration
-• Browser compatibility for AR features
-• Performance optimization for rendering 3D models
+* Managing large 3D model files
+* AI API integration
+* Browser compatibility for AR features
+* Performance optimization for rendering 3D models
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
