@@ -91,10 +91,6 @@ Quiz Completed
 
 ![Quiz Completed](https://github.com/saisreetalari/3D-VISUALIZATION/blob/main/quiz-completed.png)
 
-Model Import
-
-![Model Import]()
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Folder Structure
@@ -117,12 +113,6 @@ AR-Edu/
 │   ├── penguin.glb
 │   ├── skull.glb
 │   └── solar_system.glb
-│
-├── images/
-│   ├── home.png
-│   ├── visualization.png
-│   ├── chatbot.png
-│   └── quiz.png
 ```
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -132,7 +122,7 @@ Installation
 Clone Repository
 
 ```bash 
-git clone YOUR_GITHUB_REPOSITORY_LINK
+git clone 
 ```
 
 Open Project
@@ -191,6 +181,29 @@ Project Purpose
 The objective of this project is to improve traditional education using immersive technologies like 3D visualization, AI interaction, and voice-based learning.
 
 The platform helps students understand concepts more effectively through visual and interactive experiences.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Important Note
+
+This project uses OpenRouter API for the AI chatbot functionality.
+
+For security reasons, users must create their own OpenRouter API key and replace it inside the code before running the project.
+
+Steps:
+
+1. Create an account on OpenRouter
+2. Generate your API key
+3. Open app.js
+4. Replace the existing API key with your own key
+
+Example:
+
+```javascript
+const OPENROUTER_API_KEY = "YOUR_API_KEY_HERE";
+```
+
+Without a valid API key, the AI chatbot feature will not work properly.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
