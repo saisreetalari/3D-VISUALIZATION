@@ -208,7 +208,10 @@ To provide a complete demonstration of the project features and functionality, s
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Author
+Developed By
 
 Talari Sai Sree
-BCA Data Science Student
+Gonchala Lakshmi Padmaja
+Challabathula Tulasi
+
+Departmet : BCA Data Science 
