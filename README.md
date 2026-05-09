@@ -202,6 +202,7 @@ const OPENROUTER_API_KEY = "YOUR_API_KEY_HERE";
 
 Without a valid API key, the AI chatbot feature will not work properly.
 
+
 A live deployment link is not included because the project contains large 3D assets and API-based integrations that caused deployment limitations during hosting.
 To provide a complete demonstration of the project features and functionality, screenshots and project source code have been included instead.
 
@@ -209,5 +210,5 @@ To provide a complete demonstration of the project features and functionality, s
 
 Author
 
-Talari Sai Sree,
+Talari Sai Sree
 BCA Data Science Student
