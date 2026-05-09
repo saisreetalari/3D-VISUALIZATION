@@ -210,8 +210,8 @@ To provide a complete demonstration of the project features and functionality, s
 
 Developed By
 
-Talari Sai Sree
-Gonchala Lakshmi Padmaja
-Challabathula Tulasi
+1. Talari Sai Sree  
+2. Gonchala Lakshmi Padmaja  
+3. Challabathula Tulasi  
 
-Departmet : BCA Data Science 
+Department: BCA Data Science
