@@ -743,7 +743,7 @@ document.exitFullscreen();
 /*        CHATBOT AI            */
 /* ============================= */
 
-const OPENROUTER_API_KEY="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";
+const OPENROUTER_API_KEY=" /* Enter_Your_API_Key */ ";
 
 function toggleChat(){
 const chat=document.getElementById("chatContainer");
