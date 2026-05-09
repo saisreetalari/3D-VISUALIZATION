@@ -122,7 +122,7 @@ Installation
 Clone Repository
 
 ```bash 
-git clone 
+git clone https://github.com/saisreetalari/3D-VISUALIZATION.git
 ```
 
 Open Project
