@@ -89,7 +89,7 @@ Quiz Attempt
 
 Quiz Completed
 
-![Quiz Completed]()
+![Quiz Completed](https://github.com/saisreetalari/3D-VISUALIZATION/blob/main/quiz-completed.png)
 
 Model Import
 
