@@ -81,7 +81,12 @@ Prompt Entry
 
 Model Generation
 
-![Model Generation]()
+![Model Generation](https://github.com/saisreetalari/3D-VISUALIZATION/blob/main/model-generation.png)
+
+Quiz Attempt
+
+![Quiz Attempt]()
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
