@@ -73,11 +73,11 @@ Home Page
 
 Main Page
 
-![Main Page](images/visualization.png)
+![Main Page](https://github.com/saisreetalari/3D-VISUALIZATION/blob/main/main-page.png)
 
-AI Chatbot
+Prompt Entry
 
-![AI Chatbot](images/chatbot.png)
+![Prompt Entry](images/chatbot.png)
 
 Quiz Section
 
