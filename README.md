@@ -77,11 +77,11 @@ Main Page
 
 Prompt Entry
 
-![Prompt Entry](images/chatbot.png)
+![Prompt Entry](https://github.com/saisreetalari/3D-VISUALIZATION/blob/main/prompt-entry.png)
 
-Quiz Section
+Model Generation
 
-![Quiz Section](images/quiz.png)
+![Model Generation]()
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
