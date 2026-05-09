@@ -743,7 +743,7 @@ document.exitFullscreen();
 /*        CHATBOT AI            */
 /* ============================= */
 
-const OPENROUTER_API_KEY=" /* Enter_Your_API_Key */ ";
+const OPENROUTER_API_KEY="your_real_key";
 
 function toggleChat(){
 const chat=document.getElementById("chatContainer");
