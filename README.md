@@ -209,5 +209,5 @@ Without a valid API key, the AI chatbot feature will not work properly.
 
 Author
 
-Talari Sai Sree
+Talari Sai Sree,
 BCA Data Science Student
