@@ -95,7 +95,7 @@ Quiz Completed
 Folder Structure
 
 ```text 
-AR-Edu/
+3D-VISUALIZATION/
 │
 ├── index.html
 ├── learn.html
